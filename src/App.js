@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { BrowserRouter as Roter, Route, Link } from 'react-router-dom'
 import dcComics from './dc-comics.png';
 import marvelComics from './marvel-comics.jpg';
+import batman from './batman.png';
+import robin from './robin.jpeg';
+import wonderWoman from './wonder woman.jpeg';
 import './App.css';
 
 function Home() {
@@ -23,7 +26,21 @@ function DCComics() {
   return (
     <div>
       <h1> This is the DC Comics page</h1>
-    </div>
+      <div className='container' >
+        <div className='column' >
+          <h1>Batman</h1>
+          <img src={batman} alt='Batman' />
+        </div>
+        <div className='column' >
+          <h1>Robin</h1>
+          <img src={robin} alt='Robin' />
+        </div>
+        <div className='column' >
+          <h1>Wonder Woman</h1>
+          <img src={wonderWoman} alt='Wonder Woman' />
+        </div>
+      </div >
+    </div >
   )
 }
 function Marvel() {
