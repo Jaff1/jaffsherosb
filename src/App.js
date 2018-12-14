@@ -7,6 +7,29 @@ import robin from './robin.jpeg';
 import wonderWoman from './wonder woman.jpeg';
 import './App.css';
 
+function DCComics() {
+  return (
+    <div>
+      <h1> This is the DC Comics page</h1>
+      <div className='container'>
+        <Hero name='Batman' src={batman} powers='rich, strong, fast, sexy'/>
+        <Hero name='Robin' src={robin} powers='green, mask, fast'/>
+        <Hero name='Wonder Woman' src={wonderWoman} powers='fast, sexy, smart' />
+      </div >
+    </div >
+  )
+}
+
+function Hero(props) {
+  return (
+    <div className='column' >
+      <h1>{props.name}</h1>
+      <h3>{props.powers}</h3>
+      <img src={props.src} alt={props.name} />
+    </div>
+  )
+}
+
 function Home() {
   return (
     <div>
@@ -22,27 +45,7 @@ function Home() {
     </div>
   )
 }
-function DCComics() {
-  return (
-    <div>
-      <h1> This is the DC Comics page</h1>
-      <div className='container' >
-        <div className='column' >
-          <h1>Batman</h1>
-          <img src={batman} alt='Batman' />
-        </div>
-        <div className='column' >
-          <h1>Robin</h1>
-          <img src={robin} alt='Robin' />
-        </div>
-        <div className='column' >
-          <h1>Wonder Woman</h1>
-          <img src={wonderWoman} alt='Wonder Woman' />
-        </div>
-      </div >
-    </div >
-  )
-}
+
 function Marvel() {
   return (
     <div>
