@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Roter, Route } from 'react-router-dom'
+import { BrowserRouter as Roter, Route, Link } from 'react-router-dom'
 import dcComics from './dc-comics.png';
 import marvelComics from './marvel-comics.jpg';
 import './App.css';
@@ -9,12 +9,12 @@ function Home() {
     <div>
       <h1>Welcome to the Heros app!!</h1>
       <div className='container'>
-        <div className='column'>
+        <Link to='/dc-comics' className='column'>
           <img src={dcComics} alt='DC comics Logo' />
-        </div>
-        <div className='column'>
+        </Link>
+        <Link to='/marvel' className='column'>
           <img src={marvelComics} alt='Marvel comics Logo' />
-        </div>
+        </Link>
       </div>
     </div>
   )
@@ -39,7 +39,7 @@ class App extends Component {
     return (
       <Roter>
         <div className="App">
-          <Route excact path="/" component={Home} />
+          <Route exact path="/" component={Home} />
           <Route path="/dc-comics" component={DCComics} />
           <Route path="/marvel" component={Marvel} />
         </div>
